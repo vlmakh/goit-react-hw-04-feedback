@@ -44,7 +44,7 @@ function App() {
       </Section>
 
       <Section title="Statistics">
-        {countTotalFeedback() !== 0 ? (
+        {countTotalFeedback() ? (
           <Statistics
             good={good}
             neutral={neutral}
