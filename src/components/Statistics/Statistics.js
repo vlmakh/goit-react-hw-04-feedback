@@ -1,29 +1,29 @@
 import PropTypes from 'prop-types';
-import { StatList, StatListItem, Name, State } from './Statistics.styled';
+import { StatList, StatItem, Name, State } from './Statistics.styled';
 
 export function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
     <StatList>
-      <StatListItem>
+      <StatItem>
         <Name>Good:</Name>
         <State>{good}</State>
-      </StatListItem>
-      <StatListItem>
+      </StatItem>
+      <StatItem>
         <Name>Neutral:</Name>
         <State>{neutral}</State>
-      </StatListItem>
-      <StatListItem>
+      </StatItem>
+      <StatItem>
         <Name>Bad:</Name>
         <State>{bad}</State>
-      </StatListItem>
-      <StatListItem>
+      </StatItem>
+      <StatItem>
         <Name>Total:</Name>
         <State>{total}</State>
-      </StatListItem>
-      <StatListItem>
+      </StatItem>
+      <StatItem>
         <Name>Positive feedback:</Name>
         <State>{positivePercentage}%</State>
-      </StatListItem>
+      </StatItem>
     </StatList>
   );
 }

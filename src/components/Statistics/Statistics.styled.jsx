@@ -8,7 +8,7 @@ export const StatList = styled.ul`
   padding: 0;
 `;
 
-export const StatListItem = styled.li`
+export const StatItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
