@@ -6,22 +6,22 @@ export const StatList = styled.ul`
   width: 200px;
   margin: 0 auto;
   padding: 0;
+`;
 
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 8px;
-  }
+export const StatListItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
 
-  li::before {
+  ::before {
     content: '';
     height: 1px;
     flex-grow: 1;
     background-color: #000;
   }
 
-  li:not(:first-of-type) {
+  :not(:first-of-type) {
     margin-top: 10px;
   }
 `;
