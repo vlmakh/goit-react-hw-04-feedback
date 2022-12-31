@@ -10,7 +10,6 @@ function App() {
   const [bad, addBad] = useState(0);
 
   const addFeedback = option => {
-    // setState(state => ({ [option]: state[option] + 1 }));
     switch (option) {
       case 'good':
         addGood(count => count + 1);

@@ -6,7 +6,7 @@ export function FeedbackOptions({ options, addFeedback }) {
     <div>
       {options.map(option => (
         <Button onClick={() => addFeedback(option)} key={option}>
-          {option[0].toUpperCase() + option.slice(1)}
+          {option}
         </Button>
       ))}
     </div>
@@ -14,6 +14,6 @@ export function FeedbackOptions({ options, addFeedback }) {
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string),
-  addFeedback: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  addFeedback: PropTypes.func.isRequired,
 };
