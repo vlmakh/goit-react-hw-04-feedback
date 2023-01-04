@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 import { StatList, StatItem, Name, State } from './Statistics.styled';
 
-export function Statistics({ good, neutral, bad, total, positivePercentage }) {
+export function Statistics({ state, total, positivePercentage }) {
   return (
     <StatList>
       <StatItem>
         <Name>Good:</Name>
-        <State>{good}</State>
+        <State>{state.good}</State>
       </StatItem>
       <StatItem>
         <Name>Neutral:</Name>
-        <State>{neutral}</State>
+        <State>{state.neutral}</State>
       </StatItem>
       <StatItem>
         <Name>Bad:</Name>
-        <State>{bad}</State>
+        <State>{state.bad}</State>
       </StatItem>
       <StatItem>
         <Name>Total:</Name>
@@ -29,9 +29,11 @@ export function Statistics({ good, neutral, bad, total, positivePercentage }) {
 }
 
 Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
+  state: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }).isRequired,
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,
 };
