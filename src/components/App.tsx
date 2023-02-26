@@ -4,13 +4,13 @@ import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import React from 'react';
-// import { StateType } from '../components/types';
+import { StateType } from '../components/types';
 
 function App() {
-  const [state, setState] = useState({ good: 0, neutral: 0, bad: 0})
+  const [state, setState] = useState<StateType>({ good: 0, neutral: 0, bad: 0 });
 
-  const addFeedback = (option: string | number): void => {
-    setState({...state, [option]: state[option] + 1})    
+  const addFeedback = (option: any): void => {
+      setState({ ...state, [option]: state[option] + 1 });
   };
 
   const countTotalFeedback = (): number => {

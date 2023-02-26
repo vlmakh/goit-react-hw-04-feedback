@@ -4,6 +4,8 @@ export type StateType = {
   good: number;
   neutral: number;
   bad: number;
+
+  [index: string]: number;
 };
 
 export type StatisticsType = {
