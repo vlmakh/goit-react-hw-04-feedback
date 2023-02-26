@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import { Button } from './FeedbackOptions.styled';
+import { FeedBackOptType } from '../types';
 
-export function FeedbackOptions({ options, addFeedback }) {
+export function FeedbackOptions({ options, addFeedback }: FeedBackOptType) {
   return (
     <div>
       {options.map(option => (
@@ -12,8 +13,3 @@ export function FeedbackOptions({ options, addFeedback }) {
     </div>
   );
 }
-
-FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  addFeedback: PropTypes.func.isRequired,
-};
