@@ -2,7 +2,7 @@ import React from 'react';
 import { StatList, StatItem, Name, State } from './Statistics.styled';
 import { StatisticsType } from '../types';
 
-export function Statistics({ state, total, positivePercentage }: StatisticsType) {
+export default function Statistics({ state, total, positivePercentage }: StatisticsType) {
   return (
     <StatList>
       <StatItem>

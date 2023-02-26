@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-import { Section } from './Section/Section';
-import { Statistics } from './Statistics/Statistics';
-import { Notification } from './Notification/Notification';
+import FeedbackOptions from 'components/FeedbackOptions';
+import Section from 'components/Section';
+import Statistics from 'components/Statistics';
+import Notification from 'components/Notification';
 import React from 'react';
-import { StateType } from '../components/types';
+import { StateType } from 'components/types';
 
 function App() {
   const [state, setState] = useState<StateType>({ good: 0, neutral: 0, bad: 0 });
