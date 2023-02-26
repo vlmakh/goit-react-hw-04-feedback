@@ -1,7 +1,8 @@
 import React from 'react';
 import { StatList, StatItem, Name, State } from './Statistics.styled';
+import { StatisticsType } from '../types';
 
-export function Statistics({ state, total, positivePercentage }) {
+export function Statistics({ state, total, positivePercentage }: StatisticsType) {
   return (
     <StatList>
       <StatItem>
@@ -27,13 +28,3 @@ export function Statistics({ state, total, positivePercentage }) {
     </StatList>
   );
 }
-
-// Statistics.propTypes = {
-//   state: PropTypes.shape({
-//     good: PropTypes.number.isRequired,
-//     neutral: PropTypes.number.isRequired,
-//     bad: PropTypes.number.isRequired,
-//   }).isRequired,
-//   total: PropTypes.number.isRequired,
-//   positivePercentage: PropTypes.number.isRequired,
-// };

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Title } from './Section.styled';
+import { SectionType } from '../types';
 
-export function Section({ title, children }) {
+export function Section({ title, children }: SectionType) {
   return (
     <Container>
       <Title>{title}</Title>
@@ -9,8 +10,3 @@ export function Section({ title, children }) {
     </Container>
   );
 }
-
-// Section.propTypes = {
-//   title: PropTypes.string,
-//   children: PropTypes.node,
-// };

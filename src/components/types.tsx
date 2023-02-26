@@ -1,28 +1,31 @@
+import { ReactNode } from 'react';
+
 export type StateType = {
-  showLoader: boolean;
-  showStartTitle: boolean;
-  images: string[];
-  page: number;
-  query: string;
-  totalFound: number;
-  scroll: number;
+  good: number;
+  neutral: number;
+  bad: number;
 };
 
-export type LoadMoreType = {
-  loadMore: () => void;
+export type StatisticsType = {
+  state: StateType;
+  total: number;
+  positivePercentage: number;
 };
 
-export type OnSumbitType = {
-  onSubmit: (searchQuery: string) => void;
+export type SectionType = {
+  title: string;
+  children: ReactNode;
 };
 
-export type ImageType = {
-  id: number;
-  largeImageURL: string;
-  webformatURL: string;
-  tags: string;
+export type NotifType = {
+  message: string;
 };
 
-export type ImagesType = {
-  images: Array<ImageType>;
+export type OptionType = {
+  option: string;
+};
+
+export type FeedBackOptType = {
+  options: Array<string>;
+  addFeedback: (x: string) => void;
 };

@@ -4,19 +4,20 @@ import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import React from 'react';
+// import { StateType } from '../components/types';
 
 function App() {
   const [state, setState] = useState({ good: 0, neutral: 0, bad: 0})
 
-  const addFeedback = option => {
+  const addFeedback = (option: string | number): void => {
     setState({...state, [option]: state[option] + 1})    
   };
 
-  const countTotalFeedback = () => {
+  const countTotalFeedback = (): number => {
     return state.good + state.neutral + state.bad;
   };
 
-  const countPositiveFeedbackPercentage = () => {
+  const countPositiveFeedbackPercentage = (): number => {
     return Math.round((state.good / countTotalFeedback()) * 100);
   };
 
